@@ -6,10 +6,10 @@
 
         <a href="index" class="logo logo-light">
             <span class="logo-sm">
-                <img src="{{ URL::asset('build/images/logo.png') }}" alt="logo-sm-light" height="60">
+                <img src="{{ URL::asset('assets/images/logo.png') }}" alt="logo-sm-light" height="60">
             </span>
             <span class="logo-lg">
-                <img src="{{ URL::asset('build/images/logo.png') }}" alt="logo-light" height="60">
+                <img src="{{ URL::asset('assets/images/logo.png') }}" alt="logo-light" height="60">
             </span>
         </a>
     </div>
@@ -28,31 +28,31 @@
             <ul class="metismenu list-unstyled" id="side-menu">                
 
                 <li>
-                    <a href="{{route('dashboard')}}" class="waves-effect">                       
+                    <a href="{{ auth()->user()->role == 'admin' ? route('admin.dashboard') :  route('user.dashboard') }}" class="waves-effect">                       
                         <span>Dashboard</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{route('dashboard')}}" class="waves-effect">                       
+                    <a href="{{ auth()->user()->role == 'admin' ? route('admin.dashboard') :  route('user.dashboard') }}" class="waves-effect">                       
                         <span>Invoices</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{route('dashboard')}}" class="waves-effect">                       
+                    <a href="{{ auth()->user()->role == 'admin' ? route('admin.dashboard') :  route('user.dashboard') }}" class="waves-effect">                       
                         <span>Suppliers</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{route('dashboard')}}" class="waves-effect">                       
+                    <a href="{{ auth()->user()->role == 'admin' ? route('admin.dashboard') :  route('user.dashboard') }}" class="waves-effect">                       
                         <span>Materials</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{route('dashboard')}}" class="waves-effect">                       
+                    <a href="{{ auth()->user()->role == 'admin' ? route('admin.dashboard') :  route('user.dashboard') }}" class="waves-effect">                       
                         <span>Reports</span>
                     </a>
                 </li>

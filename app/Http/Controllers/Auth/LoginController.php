@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class LoginController extends Controller
 {
@@ -42,10 +43,12 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
     {
-        // if ($user->isAdmin()) {
-        //     return redirect()->route('admin.dashboard'); // Redirect admins to admin dashboard
-        // }
 
-        return redirect()->route('dashboard'); // Redirect regular users to user dashboard
+        if ($user->role === 'admin') {
+            return redirect()->route('admin.dashboard'); // Redirect admins to admin dashboard
+        }
+
+        return redirect()->route('user.dashboard'); // Redirect regular users to user dashboard
     }
+   
 }

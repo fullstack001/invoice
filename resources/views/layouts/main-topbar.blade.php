@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-md navbar-light shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ URL::asset('build/images/logo.png') }}" alt="logo-sm-dark" height="70">
+                <img src="{{ URL::asset('assets/images/logo.png') }}" alt="logo-sm-dark" height="70">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>

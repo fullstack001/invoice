@@ -24,6 +24,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->boolean('online')->default(1);
+            $table->string('role')->default('user');
             $table->text('avatar')->nullable();
             $table->rememberToken();
             $table->timestamps();
@@ -36,6 +37,7 @@ return new class extends Migration
             'email' => 'admin@themesbrand.com',
             'password' => Hash::make('12345678'),
             'email_verified_at'=> now(), 
+            'role' => 'admin',
             'created_at' => now(),
         ]);
     }

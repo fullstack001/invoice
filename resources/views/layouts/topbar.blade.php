@@ -37,7 +37,7 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
-                    <a class="dropdown-item" href="{{ route('profile') }}"><i
+                    <a class="dropdown-item" href="{{ auth()->user()->role == 'admin' ? route('admin.profile') :  route('user.profile') }}"><i
                             class="mdi mdi-account-circle text-muted font-size-16 align-middle me-1"></i> <span
                             class="align-middle">Profile</span></a>                   
                     <a class="dropdown-item" href="#">

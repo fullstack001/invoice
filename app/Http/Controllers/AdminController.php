@@ -8,13 +8,8 @@ use App\Models\User;
 use App\Models\Company;
 use App\Rules\CurrentPasswordRule;
 
-class HomeController extends Controller
+class AdminController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth');
@@ -27,11 +22,11 @@ class HomeController extends Controller
      */
     // public function root()
     // {
-    //     return view('user.index');
+    //     return view('dashboard.index');
     // }
 
     public function index(){
-        return view('user.index');
+        return view('admin.index');
     }
 
     // public function index(Request $request)
@@ -45,7 +40,7 @@ class HomeController extends Controller
     public function profile(Request $request){
         $user = User::find(auth()->id());
         $company = Company::find($user->id)->name;        
-        return view('user.profile',  compact('company'));
+        return view('admin.profile',  compact('company'));
     }
 
     public function profileUpdate(Request $request){
@@ -55,6 +50,7 @@ class HomeController extends Controller
             'current_password' => 'nullable|string',
             'password' => 'nullable|string|min:8|confirmed',
             'avatar' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+
         ]);
        
         // Update avatar
