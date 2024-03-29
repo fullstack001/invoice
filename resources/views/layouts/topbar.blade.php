@@ -30,7 +30,7 @@
                         </div>
 
                         <div class="flex-shrink-0">
-                            <img src="{{ auth()->user()->avatar ? URL::asset(auth()->user()->avatar) : URL::asset('images/users/avatar.png') }}"
+                            <img src="{{ auth()->user()->avatar ? URL::asset(auth()->user()->avatar) : URL::asset('assets/images/users/avatar.png') }}"
                                 class="img-fluid header-profile-user rounded-circle" alt="">
                         </div>                             
                     </span>

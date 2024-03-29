@@ -18,7 +18,7 @@
                 <form action="{{ route('profile.update') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="user-avatar mb-3">
-                        <img src="{{ auth()->user()->avatar ? URL::asset(auth()->user()->avatar) : URL::asset('images/users/avatar.png') }} " class="img-fluid profile-avatar rounded-circle" alt="">
+                        <img src="{{ auth()->user()->avatar ? URL::asset(auth()->user()->avatar) : URL::asset('assets/images/users/avatar.png') }} " class="img-fluid profile-avatar rounded-circle" alt="">
                         <input type="file" name="avatar" id="avatar" accept="image/*">
                     </div>
 

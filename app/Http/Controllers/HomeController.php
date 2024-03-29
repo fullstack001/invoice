@@ -60,7 +60,7 @@ class HomeController extends Controller
        
         // Update avatar
         if ($request->hasFile('avatar')) {
-            $avatarPath = $request->file('avatar')->store('images/users', 'public');
+            $avatarPath = $request->file('avatar')->store('assets/images/users', 'public');
             auth()->user()->avatar = $avatarPath;
         }
 
