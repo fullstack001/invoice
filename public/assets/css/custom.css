@@ -95,3 +95,27 @@
 .profile-avatar{
     width: 200px;
 }
+.flex-end{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex form{
+    width: fit-content;
+    margin-left: 10px;
+}
+
+.subscription-detail{
+    background-color: #ffffff;
+    padding: 20px 10px;
+    display: flex;
+}
+
+.text-right {
+    text-align: right;
+}
+

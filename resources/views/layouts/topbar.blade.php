@@ -39,10 +39,22 @@
                     <!-- item-->
                     <a class="dropdown-item" href="{{ auth()->user()->role == 'admin' ? route('admin.profile') :  route('user.profile') }}"><i
                             class="mdi mdi-account-circle text-muted font-size-16 align-middle me-1"></i> <span
-                            class="align-middle">Profile</span></a>                   
-                    <a class="dropdown-item" href="#">
-                        <i class="mdi mdi-cog-outline text-muted font-size-16 align-middle me-1"></i> <span
-                            class="align-middle">Settings</span></a>
+                            class="align-middle">Profile</span></a>   
+
+                     @if(auth()->user()->role == 'admin')
+
+                        <a class="dropdown-item" href="{{ route('admin.users') }}"><i
+                            class="mdi mdi-account-circle text-muted font-size-16 align-middle me-1"></i> <span
+                            class="align-middle">Users</span></a> 
+                                              
+                        <a class="dropdown-item" href="{{ route('subscrip.index') }}">
+                            <i class="mdi mdi-cog-outline text-muted font-size-16 align-middle me-1"></i> <span
+                                class="align-middle">Settings</span></a>
+
+                     @else
+
+                     @endif
+                  
                     <a class="dropdown-item" href="javascript:void();"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
                             class="mdi mdi-lock text-muted font-size-16 align-middle me-1"></i> <span

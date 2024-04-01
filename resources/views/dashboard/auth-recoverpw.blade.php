@@ -13,20 +13,18 @@
                             <div class="d-flex flex-column h-100 py-0 py-xl-3">
                                 <div class="text-center mb-4">
                                     <a href="index" class="">
-                                        <img src="{{ URL::asset('build/images/logo-dark.png') }}" alt="" height="22"
+                                        <img src="{{ URL::asset('assets/images/logo.png') }}" alt="" height="60"
                                             class="auth-logo logo-dark mx-auto">
-                                        <img src="{{ URL::asset('build/images/logo-light.png') }}" alt="" height="22"
+                                        <img src="{{ URL::asset('assets/images/logo.png') }}" alt="" height="60"
                                             class="auth-logo logo-light mx-auto">
                                     </a>
-                                    <p class="text-muted mt-2">User Experience & Interface Design Strategy Saas Solution</p>
+                                   
                                 </div>
 
                                 <div class="card my-auto overflow-hidden">
                                     <div class="row g-0">
-                                        <div class="col-lg-6">
-                                            <div class="bg-overlay bg-primary"></div>
-                                            <div class="h-100 bg-auth align-items-end">
-                                            </div>
+                                        <div class="col-lg-3">
+                                           
                                         </div>
 
                                         <div class="col-lg-6">
@@ -34,7 +32,7 @@
                                                 <div>
                                                     <div class="text-center mt-1">
                                                         <h4 class="font-size-18">Reset Password</h4>
-                                                        <p class="text-muted">Reset your password to Tocly.</p>
+                                                        <p class="text-muted">Reset your password to Material Master.</p>
                                                     </div>
 
                                                     <div class="alert alert-success mt-4 pt-2" role="alert">

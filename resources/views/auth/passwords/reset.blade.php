@@ -14,12 +14,11 @@
                             <div class="d-flex flex-column h-100 py-0 py-xl-3">
                                 <div class="text-center mb-4">
                                     <a href="index" class="">
-                                        <img src="{{ URL::asset('build/images/logo-dark.png') }}" alt=""
-                                            height="22" class="auth-logo logo-dark mx-auto">
-                                        <img src="{{ URL::asset('build/images/logo-light.png') }}" alt=""
-                                            height="22" class="auth-logo logo-light mx-auto">
-                                    </a>
-                                    <p class="text-muted mt-2">User Experience & Interface Design Strategy Saas Solution</p>
+                                        <img src="{{ URL::asset('assets/images/logo.png') }}" alt=""
+                                            height="60" class="auth-logo logo-dark mx-auto">
+                                        <img src="{{ URL::asset('assets/images/logo.png') }}" alt=""
+                                            height="60" class="auth-logo logo-light mx-auto">
+                                    </a>                                    
                                 </div>
 
                                 <div class="card my-auto overflow-hidden">

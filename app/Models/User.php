@@ -49,6 +49,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsTo(Company::class);
     }
 
+    public function subscrips()
+    {
+        return $this->hasMany(Subscrip::class);
+    }
+
     public function industry(){
         return $this->belongsTo(Industry::class);
     }

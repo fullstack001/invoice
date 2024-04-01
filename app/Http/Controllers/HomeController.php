@@ -43,8 +43,9 @@ class HomeController extends Controller
     // }
 
     public function profile(Request $request){
-        $user = User::find(auth()->id());
-        $company = Company::find($user->id)->name;        
+        $user = User::find(auth()->id());        
+        $company = Company::find($user->company_id)->name;  
+       
         return view('user.profile',  compact('company'));
     }
 

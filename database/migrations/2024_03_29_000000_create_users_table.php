@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
+
 return new class extends Migration
 {
     /**
@@ -15,14 +16,14 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('company_id');
+            $table->unsignedBigInteger('company_id')->nullable();
             $table->foreign('company_id')->references('id')->on('companies');
-            $table->unsignedBigInteger('industry_id');
+            $table->unsignedBigInteger('industry_id')->nullable();
             $table->foreign('industry_id')->references('id')->on('industries');
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password')->nullable();
             $table->boolean('online')->default(1);
             $table->string('role')->default('user');
             $table->text('avatar')->nullable();
@@ -40,6 +41,10 @@ return new class extends Migration
             'role' => 'admin',
             'created_at' => now(),
         ]);
+
+      
+
+
     }
 
     /**
