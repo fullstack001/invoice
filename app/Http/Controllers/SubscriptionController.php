@@ -60,20 +60,20 @@ class SubscriptionController extends Controller
             switch ($request->input('plan_id')) {
                 case 24.99:
                     $plan = 'Essential';
-                    $price_id = 'price_1P0ejQHWocuqbvt5en9vWnsJ';
+                    $price_id = 'price_1OtsaKJ3hEjUs0ExsclAE5DZ';
                     break;
-                case 69.99:
+                case 49.99:
                     $plan = 'Premium';
-                    $price_id = 'price_1P0eklHWocuqbvt5OtQFHkC2';
+                    $price_id = 'price_1OtsaKJ3hEjUs0ExXpKQIMMg';
                     break;
 
                 case 99.99:
                     $plan = 'Unlimited';
-                    $price_id = 'price_1P0el6HWocuqbvt5OvoC8au1';
+                    $price_id = 'price_1OtsaKJ3hEjUs0ExGGBMzPTK';
                     break;
                 default:
                     $plan = 'free';
-                    $price_id = 'price_1P0eifHWocuqbvt5R1xnfZku';
+                    $price_id = 'price_1P12CGJ3hEjUs0ExWUm9N1UQ';
                     break;
             }            
 

@@ -46,7 +46,7 @@
                                 <select name="plan_id" id="plan_id" class="form-control">
                                     <option value="0">Free Plan - 0 &#163;</option>
                                     <option value="24.99">Essential Plan - 24.99 &#163;</option>
-                                    <option value="69.99">Premium Plan - 69.99 &#163;</option>
+                                    <option value="49.99">Premium Plan - 49.99 &#163;</option>
                                     <option value="99.99">Unlimited Plan - 99.99 &#163;</option>
                                 </select>
                             </div>
