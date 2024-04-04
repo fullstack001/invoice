@@ -13,7 +13,8 @@ class UserController extends Controller
     }
 
     public function index(Request $request){
-        $users = User::all();
+        $user = User::find(auth()->id());
+        $users = User::where('company_id', $user->company_id)->get();
         return view('admin.user', compact('users'));
     }
 
