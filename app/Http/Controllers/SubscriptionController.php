@@ -21,7 +21,7 @@ class SubscriptionController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
+    public function index(){        
         $user = User::find(auth()->id());
         try {
             Stripe::setApiKey(env('STRIPE_SECRET'));
@@ -57,23 +57,25 @@ class SubscriptionController extends Controller
             // Subscribe user to selected plan           
             $plan = '';
             $price_id = '';
+           
+
             switch ($request->input('plan_id')) {
                 case 24.99:
                     $plan = 'Essential';
-                    $price_id = 'price_1OtsaKJ3hEjUs0ExsclAE5DZ';
+                    $price_id = env('Plan_Essential');
                     break;
                 case 49.99:
                     $plan = 'Premium';
-                    $price_id = 'price_1OtsaKJ3hEjUs0ExXpKQIMMg';
+                    $price_id = env('Plan_Premium');
                     break;
 
                 case 99.99:
                     $plan = 'Unlimited';
-                    $price_id = 'price_1OtsaKJ3hEjUs0ExGGBMzPTK';
+                    $price_id = env('Plan_Unlimited');
                     break;
                 default:
                     $plan = 'free';
-                    $price_id = 'price_1P12CGJ3hEjUs0ExWUm9N1UQ';
+                    $price_id = env('Plan_Free');
                     break;
             }            
 
